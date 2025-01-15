@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Graduated with MS in Robotics from CMU 🤖! 📍Pittsburgh, PA
+Graduated with MS in Robotics from CMU! 📍Pittsburgh, PA

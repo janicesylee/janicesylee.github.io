@@ -14,6 +14,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am a recent graduate (Masters in Robotics) from Carnegie Mellon University, Robotics Institute. I worked on compliant gripper design and visual servoing controller for an autonomous robotic system developed for cornstalk monitoring, co-advised by Oliver Kroemer and George Kantor.
+I am a research assistant at the <a href='https://iamlab-cmu.github.io/'>Intelligent Autonomous Manipulation Lab</a>, Robotics Institute, Carnegie Mellon University (CMU). I recently earned a Master of Science in Robotics from CMU, where I focused on developing a compliant gripper design and visual servoing controller for an autonomous robotic system designed for cornstalk monitoring. My research was co-advised by Professors Oliver Kroemer and George Kantor.
 
-I graduated from Carnegie Mellon University (B.S) in Mechanical Engineering. Previously I interned at Smith+Nephew Robotics and Samsung Electronics Global Research Center. 
+I hold a Bachelor of Science in Mechanical Engineering with a double major in Robotics from CMU. In addition to my academic pursuits, I have gained practical experience through internships at Smith+Nephew Robotics and Samsung Electronics Global Research Center.

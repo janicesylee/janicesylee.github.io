@@ -1,81 +1,115 @@
 ---
-layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
-importance: 1
-category: work
-related_publications: true
+
+layout: page  
+title: Cornstalk Monitoring Robot  
+description: Autnomous Sensor Insertion and Replacement for Cornstalk Monitoring Robot
+img: /assets/img/cornbot_thumbnail.jpg  
+importance: 1  
+category: research  
+related_publications: true  
+
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+<div class="embed-responsive embed-responsive-16by9 mb-4">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Ubg4PhAubUY?si=_gbg9ncRS-7hJMle" allowfullscreen></iframe>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+<div class="caption text-center mt-2">
+    This video showcases the robotic system’s field demonstration, highlighting key capabilities such as autonomous navigation, visual servoing for alignment, and sensor insertion and replacement {% cite lee2024autonomous %}.
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+<!-- 2. Research Introduction + Motivation -->
+Sustainable agriculture relies heavily on accurate and efficient monitoring of crop health. Excessive nitrogen fertilizer use can harm the crop and the environment, making precise nitrate monitoring critical for optimizing fertilizer application and improving crop yield. This project addresses this challenge by developing a robust, autonomous robotic system capable of performing nitrate sensor insertion and replacement in cornfields for long-term field deployment. By eliminating the need for manual data collection, this system significantly reduces labor costs and improves the scalability of precision agriculture technologies.
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-10 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/cornbot_1.png" title="example image" class="" %}
+  </div>
+</div>
+<div class="caption">
+    (Left) Overview of the robotic system components. (Right) The robot navigating a cornfield during field testing.
+</div>
+
+<!-- 3. Overall Robotic System Introduction -->
+The robotic system consists of a mobile platform (AMIGA) equipped with a 6-DOF manipulator arm (xARM), a compliant gripper, and custom sensor maintenance mechanisms for sensor replacement and calibration. The robot autonomously navigates rows of cornstalks, identifies target stalks, and executes precisely sensor insertion for accurate real-time data collection. Additionally, the system performs autonomous sensor replacement through precise alignment and includes an in-house sensor calibration mechanism. The integration of these components enables seamless operation in agricultural field environments.
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-10 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/website_gripper.png" title="gripper image" class="" %}
+  </div>
+</div>
+<div class="caption">
+    (Left) Overview of the gripper design and functions. (Right) Coupled sliding mechanism.
+</div>
+
+<!-- 4. Gripper Design -->
+A key contribution of this project is the **custom two-finger compliant gripper**, designed to adapt to varying cornstalk diameters. This adaptive compliance and two-finger design allows for robust grasping and precise sensor insertion, improving the insertion success rate by 17%. In addition, to avoid collision with other stalks, the gripper is required to be compact. Utilizing the coupled sliding mechanism, the gripper uses a single linear actuator to grasp the stalk, insert the sensor and swap sensors while remaining compact in size. 
+
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-7 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/precise_alignment.png" title="Funneling mechanism for sensor alignment"%}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/funneling_cad.gif" title="Sensor Replacement" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    (Left) Sensor Replacement Mechanism. (Right) Funneling mechanism.
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
 
-```html
+<!-- 5. Sensor Replacement + Funneling Mechanism -->
+To enable long-term field deployment with minimal human intervention, contact-based sensors must be replaced frequently due to wear and tear. The small size of the sensor and dynamic field conditions make the replacement process require precise alignment, which is particularly challenging when using low-precision manipulators. The funneling mechanism utilizing t-shaped tapered extrusion was developed to address these challenges by compensating for external disturbances and manipulator inaccuracies. This mechanism improves alignment precision by 76%, guiding the sensor to the insertion point with minimal reliance on perception and hardware control. As a result, the system ensures consistent and reliable sensor replacement, even in unstructured outdoor environments.
+
+
+<div class="row">
+    <div class="col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/pbvs.png" title="Visual servoing system in action" %}
+    </div>
+</div>
+<div class="caption">
+    (Left) Visual Detection. (Right) Position-baed Visual Servoing Controller
+</div>
+
+<!-- 6. Cornstalk Visual Detection + Visual Servoing -->
+For precise sensor insertion despite  varying field conditions and a dynamic robot base, the system incorporates a **Mask R-CNN-based visual detection and visual servoing system**. This system detects and tracks cornstalks in real time, dynamically adjusting the manipulator’s position to ensure accurate insertion. The position-based visual servoing controller compensates for variations in cornstalk height, orientation, and wind-induced motion.
+
 <div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
+    <div class="col-sm-10 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/motion_sequence2.png" title="Motion sequence of the robotic system." %}
+    </div>
 </div>
-```
+<div class="caption">
+    Motion sequence of the robotic system.
+</div>
 
-{% endraw %}
+<!-- 7. Field Testing -->
+The system was extensively tested in both lab and field environments. Field deployments at **Rivendale Farm** and **Iowa Ames Curtiss Farm** demonstrated the robot’s ability to navigate uneven terrain and adapt to real-world agricultural conditions. The field tests showed a **22% improvement** in overall sensor insertion performance compared to previous prototypes, validating the system's robustness and reliability for large-scale agricultural applications.
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/evaluation.png" title="Field evaluation of the robotic system." %}
+    </div>
+</div>
+<div class="caption">
+    Field evaluation of the robotic system.
+</div>
+
+<!-- 8. Thesis Presentation -->
+The **thesis presentation** provides a detailed overview of the iterative design and development process that led to the final robotic system. It covers system integration, experimental evaluations, and key insights gained from field testing. The presentation highlights the project’s contributions to precision agriculture and its potential impact on sustainable farming practices {% cite Lee-2024-144865 %}.
+
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe 
+        src="https://andrewcmu-my.sharepoint.com/personal/janicel2_andrew_cmu_edu/_layouts/15/Doc.aspx?sourcedoc={a0241919-2065-4a54-9073-b4df6ec5128b}&amp;action=embedview&amp;wdAr=1.7777777777777777" 
+        class="embed-responsive-item"
+        frameborder="0" 
+        allowfullscreen>
+    </iframe>
+</div>
+
+
+<div class="mt-5">
+</div>
+
+

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Joined MS in Robotics at CMU 🤖! 📍Pittsburgh, PA
+Joined MS in Robotics at CMU! 📍Pittsburgh, PA

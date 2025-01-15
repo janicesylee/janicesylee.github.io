@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Successfully Defended my Master's Thesis in Robotics at CMU 🤖! 📍Pittsburgh, PA
+Successfully Defended my Master's Thesis in Robotics at CMU! 📍Pittsburgh, PA
