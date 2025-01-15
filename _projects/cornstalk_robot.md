@@ -2,7 +2,7 @@
 
 layout: page  
 title: Cornstalk Monitoring Robot  
-description: Autnomous Sensor Insertion and Replacement for Cornstalk Monitoring Robot
+description: 
 img: /assets/img/cornbot_thumbnail.jpg  
 importance: 1  
 category: research  
