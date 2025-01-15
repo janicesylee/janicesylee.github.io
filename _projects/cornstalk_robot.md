@@ -101,7 +101,7 @@ The **thesis presentation** provides a detailed overview of the iterative design
 
 <div class="embed-responsive embed-responsive-16by9">
     <iframe 
-        src="https://andrewcmu-my.sharepoint.com/personal/janicel2_andrew_cmu_edu/_layouts/15/Doc.aspx?sourcedoc={a0241919-2065-4a54-9073-b4df6ec5128b}&amp;action=embedview&amp;wdAr=1.7777777777777777" 
+        src="https://1drv.ms/p/c/3013cfb7a18bbd2f/IQROiwi-ukN3SLD-ZOk0ITAQAYBwBhlYpXz7PruigPEW9xw" width="402" height="327" frameborder="0" scrolling="no"
         class="embed-responsive-item"
         frameborder="0" 
         allowfullscreen>
